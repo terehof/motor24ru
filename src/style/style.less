@@ -1,0 +1,477 @@
+@import "variables";
+@import "reset";
+@import "helpers";
+@import "fonts";
+@import "popups";
+
+html {
+    height: 100%;
+    font-size: 10px;
+}
+body {
+    min-height: 100%;
+
+}
+.main-wrapper {
+    position: relative;
+    padding-top: 11.4rem;
+    padding-bottom: 7.1rem;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background-image: url(../img/main-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #e2eaed;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 26.9rem;
+        height: 7.1rem;
+        background: url(../img/bottom-decor.png) center/cover no-repeat;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+.main-logo {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 51.9rem;
+    height: 11.4rem;
+    background: url(../img/main-logo.png) center/cover no-repeat;
+}
+
+
+
+.carousel-wrap {
+    padding-top: 6.5rem;
+    margin-bottom: 8rem;
+}
+.carousel-main {
+    position: relative;
+    max-width: 1440px;
+    margin: 3rem auto 0;
+    padding-top: 3.9em;
+    font-size: 10px;
+    height: 62.5em;
+    width: 144em;
+}
+.cloud9-item {
+    position: relative;
+    width: 36em;
+    height: 40em;
+    background-color: #fff;
+}
+#carousel {
+    height: 100%;
+    width: 100%;
+    overflow: visible !important;
+}
+#carousel .cloud9-item, #buttons button {
+    cursor: pointer;
+}
+
+
+.carousel-item {
+    box-shadow: 10px -25px 62px rgba(102, 102, 123, 0.3);
+    transition: opacity 0.2s ease, box-shadow 0.4s ease;
+    will-change: transform;
+    &__logo {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 9.5em;
+        transform: translate(-50%, -50%);
+    }
+    &__logos {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        bottom: 7.3em;
+        transform: translate(-50%, 50%);
+
+    }
+    &__text {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        left: 0;
+        top: 13.125em;
+        padding: 0 5em;
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+        color: #696b7b;
+        font-size: 1.6em;
+        line-height: 1.375;
+        background: url(../img/text-decor.png) no-repeat;
+        background-position: 50% 100%;
+        background-size: 100%;
+    }
+
+    &__hover {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        will-change: opacity;
+    }
+    &__hover-logo {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 9.5em;
+        transform: translate(-50%, -50%);
+    }
+
+    &.item-belrus {
+        .carousel-item__logo {
+            width: 28.6em;
+            height: 7em;
+            background: url(../img/item-belrus-logo.png) center/100% no-repeat;
+        }
+        .carousel-item__logos {
+            width: 25.4em;
+            height: 7.9em;
+            background: url(../img/item-belrus-logos.png) center/100% no-repeat;
+        }
+        .carousel-item__hover {
+            background: url(../img/item-belrus-hover-bg.png) no-repeat;
+            background-size: 100%;
+        }
+        .carousel-item__hover-logo {
+            width: 28.6em;
+            height: 7em;
+            background: url(../img/item-belrus-logo-hover.png) center/100% no-repeat;
+        }
+    }
+    &.item-mahina {
+        .carousel-item__logo {
+            width: 30.3em;
+            height: 5.7em;
+            background: url(../img/item-mahina-logo.png) center/100% no-repeat;
+        }
+        .carousel-item__logos {
+            bottom: 9em;
+            width: 10.5em;
+            height: 5.9em;
+            background: url(../img/item-mahina-logos.png) center/100% no-repeat;
+        }
+        .carousel-item__hover {
+            background: url(../img/item-mahina-hover-bg.png) no-repeat;
+            background-size: 100%;
+        }
+        .carousel-item__hover-logo {
+            width: 30.3em;
+            height: 5.7em;
+            background: url(../img/item-mahina-logo-hover.png) center/100% no-repeat;
+        }
+    }
+
+    &.item-belarus-1 {
+        .carousel-item__logo {
+            width: 30.2em;
+            height: 6.7em;
+            background: url(../img/item-belarus-logo.png) center/100% no-repeat;
+        }
+        .carousel-item__logos {
+            width: 28.7em;
+            height: 5.8em;
+            background: url(../img/item-belarus-logos.png) center/100% no-repeat;
+        }
+        .carousel-item__hover {
+            background: url(../img/item-belarus-hover-bg.png) no-repeat;
+            background-size: 100%;
+        }
+        .carousel-item__hover-logo {
+            width: 30.2em;
+            height: 6.7em;
+            background: url(../img/item-belarus-logo-hover.png) center/100% no-repeat;
+        }
+    }
+
+    &.item-belarus-2 {
+        .carousel-item__logo {
+            width: 30.2em;
+            height: 6.7em;
+            background: url(../img/item-belarus-logo.png) center/100% no-repeat;
+        }
+        .carousel-item__logos {
+            width: 28.7em;
+            height: 5.8em;
+            background: url(../img/item-belarus-logos.png) center/100% no-repeat;
+        }
+        .carousel-item__hover {
+            background: url(../img/item-belarus-2-hover-bg.png) no-repeat;
+            background-size: 100%;
+        }
+        .carousel-item__hover-logo {
+            width: 30.2em;
+            height: 6.7em;
+            background: url(../img/item-belarus-logo-hover.png) center/100% no-repeat;
+        }
+    }
+
+    &.item-transport {
+        .carousel-item__logo {
+            width: 30.2em;
+            height: 6.2em;
+            background: url(../img/item-transport-logo.png) center/100% no-repeat;
+        }
+        .carousel-item__logos {
+            width: 13.5em;
+            height: 3.8em;
+            background: url(../img/item-transport-logos.png) center/100% no-repeat;
+        }
+        .carousel-item__hover {
+            background: url(../img/item-transport-hover-bg.png) no-repeat;
+            background-size: 100%;
+        }
+        .carousel-item__hover-logo {
+            width: 30.2em;
+            height: 6.2em;
+            background: url(../img/item-transport-logo-hover.png) center/100% no-repeat;
+        }
+    }
+
+    &.item-m-service {
+        .carousel-item__logo {
+            width: 22.3em;
+            height: 7.3em;
+            background: url(../img/item-m-service-logo.png) center/100% no-repeat;
+        }
+        .carousel-item__logos {
+            width: 9.7em;
+            height: 5.7em;
+            background: url(../img/item-m-sevice-logos.png) center/100% no-repeat;
+        }
+        .carousel-item__hover {
+            background: url(../img/item-m-service-hover-bg.png) no-repeat;
+            background-size: 100%;
+        }
+        .carousel-item__hover-logo {
+            width: 22.3em;
+            height: 7.3em;
+            background: url(../img/item-m-service-logo-hover.png) center/100% no-repeat;
+        }
+    }
+
+    &.item-mahina-comp {
+        .carousel-item__logo {
+            width: 30.3em;
+            height: 5.7em;
+            background: url(../img/item-mahina-comp-logo.png) center/100% no-repeat;
+        }
+        .carousel-item__logos {
+            width: 7.9em;
+            height: 6.8em;
+            background: url(../img/item-mahina-comp-logos.png) center/100% no-repeat;
+        }
+        .carousel-item__hover {
+            background: url(../img/item-mahina-comp-hover-bg.png) no-repeat;
+            background-size: 100%;
+        }
+        .carousel-item__hover-logo {
+            width: 30.3em;
+            height: 5.7em;
+            background: url(../img/item-mahina-comp-logo-hover.png) center/100% no-repeat;
+        }
+    }
+
+    &.item-telega {
+        .carousel-item__logo {
+            width: 29.9em;
+            height: 5.9em;
+            background: url(../img/item-telega-logo.png) center/100% no-repeat;
+        }
+        .carousel-item__logos {
+            width: 32.8em;
+            height: 8.4em;
+            background: url(../img/item-telega-logos.png) center/100% no-repeat;
+        }
+        .carousel-item__hover {
+            background: url(../img/item-telega-hover-bg.png) no-repeat;
+            background-size: 100%;
+        }
+        .carousel-item__hover-logo {
+            width: 29.9em;
+            height: 5.9em;
+            background: url(../img/item-telega-logo-hover.png) center/100% no-repeat;
+        }
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        background: #fff;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        width: 100%;
+        background: url(../img/item-shadow.png) center/100% no-repeat;
+        height: 7rem;
+        transition: all 0.35s ease;
+    }
+    &:hover {
+        box-shadow: 10px -25px 62px rgba(102, 102, 123, 0.4);
+        .carousel-item__hover {
+            opacity: 1;
+        }
+        &:after {
+            bottom: -5rem;
+        }
+    }
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: url(../img/arrow.png) no-repeat;
+    background-size: 3.2rem;
+    background-position: center center;
+    width: 3.2rem;
+    height: 7.4rem;
+    box-sizing: content-box;
+    padding: 0 0.5rem;
+    border: none;
+    outline: none;
+    &.left {
+        left: -1rem;
+        transform: translate(0, -50%) rotate(180deg);
+    }
+    &.right {
+        right: -1rem;
+    }
+}
+
+
+.carousel-item-descrip {
+    max-width: 760px;
+    margin: 5rem auto 0;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    opacity: 0;
+    transform: translate(0, 3rem);
+    &.visible {
+        opacity: 1;
+        transform: translate(0, 0);
+        transition: all 0.3s ease;
+    }
+    &__title {
+        display: block;
+        font-weight: 400;
+        color: #494e6f;
+        font-size: 2.8rem;
+        text-transform: uppercase;
+    }
+    &__link {
+        display: inline-block;
+        margin: 1rem 0 0;
+        padding: 1.2rem 5.4rem 1rem;
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: #494e6f;
+        text-decoration: none;
+        text-transform: uppercase;
+        border: 2px solid #1b0b5c;
+        transition: all 0.25s ease;
+        &:hover {
+            background: #1b0b5c;
+            color: #d6dee1;
+        }
+    }
+    &__text {
+        display: block;
+        margin: 2.5rem 0 0;
+        font-weight: 300;
+        font-size: 1.4rem;
+        color: #696b7b;
+        line-height: 1.71;
+    }
+}
+
+@media (min-width: 1025px) {
+    .carousel-arrow {
+        transition: opacity 0.2s ease;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .carousel-main {
+        font-size: 8px;
+    }
+    .carousel-arrow {
+        &.left {
+            left: 0.5rem;
+        }
+        &.right {
+            right: 0.5rem;
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .carousel-main {
+        width: 156em;
+        font-size: 7px;
+    }
+}
+@media (max-width: 1180px) {
+    .carousel-main {
+        width: 100%;
+    }
+}
+@media (max-width: 1000px) {
+    .carousel-arrow {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .carousel-item-descrip {
+        width: 100%;
+        padding: 0 2.5rem;
+    }
+    .carousel-wrap {
+        padding-top: 0;
+        margin-bottom: 4rem;
+    }
+    .carousel-item-descrip {
+        margin: 2rem auto 0;
+    }
+}
+@media (max-width: 480px) {
+    .main-logo {
+        width: 40rem;
+        height: 8.7rem;
+    }
+    .main-wrapper {
+        padding-top: 8.7rem;
+    }
+
+}
