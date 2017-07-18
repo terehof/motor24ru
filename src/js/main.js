@@ -50,7 +50,6 @@ app.main = {
                         $('.jsItemTitle').html(title);
                         $('.jsItemLink').attr('href', url).html(linkText);
                         $('.jsItemText').html(text);
-
                         $('.jsItemInfo').addClass('visible');
                         renderedFlag = false;
                     }
@@ -66,15 +65,15 @@ app.main = {
                         $('.jsItemTitle').html(title);
                         $('.jsItemLink').attr('href', url).html(linkText);
                         $('.jsItemText').html(text);
-
                         $('.jsItemInfo').addClass('visible');
                     }, 10);
-
-                },
-                onAnimationStart: function (e) {
-
                 }
-            } );
+            });
+            if ($(window).width() < 1000) {
+                setTimeout(function () {
+                    $("#carousel").data("carousel").go(1);
+                }, 3000);
+            }
         }
     },
     carouselSwipe: function () {

@@ -478,13 +478,16 @@ body {
   height: 7rem;
   transition: all 0.35s ease;
 }
-.carousel-item:hover {
+.carousel-item:hover,
+.carousel-item.current {
   box-shadow: 10px -25px 62px rgba(102, 102, 123, 0.4);
 }
-.carousel-item:hover .carousel-item__hover {
+.carousel-item:hover .carousel-item__hover,
+.carousel-item.current .carousel-item__hover {
   opacity: 1;
 }
-.carousel-item:hover:after {
+.carousel-item:hover:after,
+.carousel-item.current:after {
   bottom: -5rem;
 }
 .carousel-arrow {
