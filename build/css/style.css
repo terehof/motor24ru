@@ -555,6 +555,18 @@ body {
   color: #696b7b;
   line-height: 1.71;
 }
+.carousel-item-descrip strong {
+  font-weight: bold;
+}
+.carousel-item-descrip a {
+  color: #696b7b;
+}
+.carousel-item-descrip a:hover {
+  text-decoration: none;
+}
+.carousel-item-descrip em {
+  font-style: italic;
+}
 @media (min-width: 1025px) {
   .carousel-arrow {
     transition: opacity 0.2s ease;

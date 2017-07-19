@@ -1,4 +1,5 @@
 var app = app || {};
+app.mobileSwipeFlag = true;
 app.main = {
     carousel: function () {
         var $carousel = $('.carousel-wrap');
@@ -71,7 +72,9 @@ app.main = {
             });
             if ($(window).width() < 1000) {
                 setTimeout(function () {
-                    $("#carousel").data("carousel").go(1);
+                    if (app.mobileSwipeFlag) {
+                        $("#carousel").data("carousel").go(1);
+                    }
                 }, 3000);
             }
         }

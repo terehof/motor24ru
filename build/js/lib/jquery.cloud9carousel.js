@@ -364,6 +364,9 @@
 
       if( options.bringToFront ) {
         $container.bind( 'click.cloud9', function( event ) {
+          if (app.mobileSwipeFlag) {
+            app.mobileSwipeFlag = false;
+          }
           var hits = $(event.target).closest( '.' + options.itemClass );
 
           if( hits.length !== 0 ) {
